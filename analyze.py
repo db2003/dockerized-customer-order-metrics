@@ -1,5 +1,5 @@
 import pandas as pd
-from flask import Flask, jsonify
+from flask import Flask, jsonify # Import the Flask class for creating a small webpage for printing the results
 
 app = Flask(__name__)
 
