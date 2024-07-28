@@ -1,5 +1,6 @@
 import pandas as pd
-from flask import Flask, jsonify # Import the Flask class for creating a small webpage for printing the results
+from flask import Flask, jsonify
+import subprocess
 
 app = Flask(__name__)
 
@@ -12,16 +13,20 @@ class AnalyzeOrders:
         self.df = dataframe
 
     def revenue_per_month(self):
+        # Calculate revenue per month by grouping orders by month and summing product prices
         self.df['month'] = self.df['order_date'].dt.to_period('M')
         return self.df.groupby('month')['product_price'].sum()
 
     def revenue_per_product(self):
+        # Calculate revenue per product by grouping orders by product ID and summing product prices
         return self.df.groupby('product_id')['product_price'].sum()
 
     def revenue_per_customer(self):
+        # Calculate revenue per customer by grouping orders by customer ID and summing product prices
         return self.df.groupby('customer_id')['product_price'].sum()
 
     def top_10_customers(self):
+        # Get the top 10 customers based on revenue
         return self.revenue_per_customer().nlargest(10)
 
 @app.route('/results')
@@ -46,8 +51,7 @@ def results():
 @app.route('/test_status')
 def test_status():
     try:
-        # Run the tests
-        import subprocess
+        # Run the tests using pytest
         result = subprocess.run(['pytest', 'tester.py'], capture_output=True, text=True)
         # Check if tests passed
         if result.returncode == 0:
