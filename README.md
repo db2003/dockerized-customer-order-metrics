@@ -17,7 +17,7 @@ It includes a test service to validate the functionality of the analysis.
 7. [Screenshots](#screenshots)
 8. [Troubleshooting](#troubleshooting)
 9. [Contributing](#contributing)
-10. [License](#license)
+
 
 ## Introduction
 
