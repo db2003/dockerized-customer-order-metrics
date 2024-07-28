@@ -16,6 +16,7 @@ class TestAnalyzeOrders(unittest.TestCase):
     def test_revenue_per_month(self):
         # Test the revenue_per_month method
         result = self.analyzer.revenue_per_month()
+        # Create expected result by grouping data by month and summing product prices
         expected = self.df.copy()
         expected['month'] = expected['order_date'].dt.to_period('M')
         expected = expected.groupby('month')['product_price'].sum()
@@ -24,18 +25,21 @@ class TestAnalyzeOrders(unittest.TestCase):
     def test_revenue_per_product(self):
         # Test the revenue_per_product method
         result = self.analyzer.revenue_per_product()
+        # Create expected result by grouping data by product_id and summing product prices
         expected = self.df.groupby('product_id')['product_price'].sum()
         pd.testing.assert_series_equal(result, expected)
 
     def test_revenue_per_customer(self):
         # Test the revenue_per_customer method
         result = self.analyzer.revenue_per_customer()
+        # Create expected result by grouping data by customer_id and summing product prices
         expected = self.df.groupby('customer_id')['product_price'].sum()
         pd.testing.assert_series_equal(result, expected)
 
     def test_top_10_customers(self):
         # Test the top_10_customers method
         result = self.analyzer.top_10_customers()
+        # Create expected result by grouping data by customer_id, summing product prices, and selecting top 10
         expected = self.df.groupby('customer_id')['product_price'].sum().nlargest(10)
         pd.testing.assert_series_equal(result, expected)
 
