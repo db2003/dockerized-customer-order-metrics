@@ -1,18 +1,18 @@
-# tanX.fi Assessment
+# tanX.fi Assessment for Infrastructure Engineer
 
 ## Overview
 
-This project analyzes customer orders using a Python and as an added feature also makes a very basic webpage using Flask hosted on AWS EC2 to view the results and incorporate AWS. 
-Dockerized with Docker Compose. 
-It includes a test service to validate the functionality of the analysis.
+- This project analyzes customer orders using a Python and as an added feature also makes a very basic webpage using Flask hosted on AWS EC2 to view the results and incorporate AWS. 
+- Dockerized with Docker Compose. 
+- It includes a test service to validate the functionality of the analysis.
 
 ## Table of Contents
 
 1. [Introduction](#introduction)
 2. [Files](#files)
 3. [Setup and Installation](#setup-and-installation)
-4. [Running the Application](#running-the-application)
-5. [Testing the Application](#testing-the-application)
+4. [Build and Run the Application](#build-and-run-the-application)
+5. [Running Tests](#running-tests)
 6. [Deploying to AWS](#deploying-to-aws)
 7. [Screenshots](#screenshots)
 8. [Troubleshooting](#troubleshooting)
@@ -53,11 +53,11 @@ git clone https://github.com/db2003/tanx.fi-exp.git
    docker-compose up --build
    ```
 
-   This command will build the Docker images for both the `app` and `test` services and start them.
+   This command will build the Docker images for both the `analyze` and `tester` services and start them.
 
 2. **Access the web application:**
 
-   Open a browser and go to `http://localhost:4000/results` to see the analysis results.
+   Open a browser and go to `http://localhost:4000/results` to see the analysis results and to see the test status go to `http://localhost:4000/test_status`.
 
 ### Running Tests
 
@@ -71,6 +71,8 @@ git clone https://github.com/db2003/tanx.fi-exp.git
 
 ## Deploying to AWS
 
+Integration with AWS EC2 to test and verify its easy application with AWS hosting.
+
 ### Create an EC2 Instance
 
 1. **Log in to the AWS Management Console** and navigate to EC2.
@@ -81,10 +83,13 @@ git clone https://github.com/db2003/tanx.fi-exp.git
 
 1. **Use PuTTY to connect:**
    - Open PuTTY and load your private key.
+   - Make sure to get a pem key and convert it to ppk key for further use.
    - Connect to your EC2 instance using the Public DNS and port 22.
 
 2. **Install Docker and Docker Compose:**
-
+   - Install Docker and Docker Compose in our EC2 machine to replicate the localhost docker on AWS.
+     
+  
    ```
    sudo yum update -y
    sudo yum install -y docker
@@ -119,16 +124,24 @@ git clone https://github.com/db2003/tanx.fi-exp.git
 
 ## Screenshots
 ### Web Application Results
+
+1. FileZilla Preview for EC2 instance:
+   
 ![WhatsApp Image 2024-07-29 at 02 30 05_201bfbc7](https://github.com/user-attachments/assets/51031089-759f-42ab-b689-2a1830dc132a)
+
+2. puTTy Connection showcase for EC2 instance:
+   
 ![WhatsApp Image 2024-07-29 at 02 31 48_feac4812](https://github.com/user-attachments/assets/3217afcd-b30a-4533-8480-e2a72d86f373)
 
 
 ### Test Results
 Feel free to check out my hosted results and test status webpages hosted on amazon:
-http://ec2-34-239-136-30.compute-1.amazonaws.com:4000/test_status
-http://ec2-34-239-136-30.compute-1.amazonaws.com:4000/results
+1. [Test Status](http://ec2-34-239-136-30.compute-1.amazonaws.com:4000/test_status)
+2. [Analysis Result](http://ec2-34-239-136-30.compute-1.amazonaws.com:4000/results)
 
-![WhatsApp Image 2024-07-29 at 01 39 28_9fdcac5f](https://github.com/user-attachments/assets/6dc805ea-4fe1-46d4-a93c-adb42dd601fe)
+
+![WhatsApp Image 2024-07-29 at 03 12 37_617cbaeb](https://github.com/user-attachments/assets/d2304620-31a7-4d5a-af8e-7de3fd6cab23)
+
 ![WhatsApp Image 2024-07-29 at 01 20 49_f5584b0b](https://github.com/user-attachments/assets/16938a4e-a061-49e4-ba19-0b22b7a215aa)
 
 
