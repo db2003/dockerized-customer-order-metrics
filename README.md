@@ -135,14 +135,12 @@ Integration with AWS EC2 to test and verify its easy application with AWS hostin
 
 
 ### Test Results
-Feel free to check out my hosted results and test status webpages hosted on amazon:
-1. [Test Status](http://ec2-34-239-136-30.compute-1.amazonaws.com:4000/test_status)
-2. [Analysis Result](http://ec2-34-239-136-30.compute-1.amazonaws.com:4000/results)
 
+| Hosted Links | Screenshots |
+| ------------ | ----------- |
+| [Test Status](http://ec2-34-239-136-30.compute-1.amazonaws.com:4000/test_status) | ![Screenshot 1](https://github.com/user-attachments/assets/d2304620-31a7-4d5a-af8e-7de3fd6cab23) |
+| [Analysis Result](http://ec2-34-239-136-30.compute-1.amazonaws.com:4000/results) | ![Screenshot 2](https://github.com/user-attachments/assets/16938a4e-a061-49e4-ba19-0b22b7a215aa) |
 
-![WhatsApp Image 2024-07-29 at 03 12 37_617cbaeb](https://github.com/user-attachments/assets/d2304620-31a7-4d5a-af8e-7de3fd6cab23)
-
-![WhatsApp Image 2024-07-29 at 01 20 49_f5584b0b](https://github.com/user-attachments/assets/16938a4e-a061-49e4-ba19-0b22b7a215aa)
 
 
 
