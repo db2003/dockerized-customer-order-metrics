@@ -13,9 +13,9 @@ This project analyzes customer orders using Python and provides a web interface 
 ## Table of Contents
 
 1. [Introduction](#introduction)
-2. [Video Showcase](#video-showcase)
-3. [Architecture and Project Structure](#architecture-and-project-structure)
-4. [Tech Stack](#tech-stack)
+2. [Tech Stack](#tech-stack)
+3. [Video Showcase](#video-showcase)
+4. [Architecture and Project Structure](#architecture-and-project-structure)
 5. [Setup and Installation](#setup-and-installation)
 6. [Build and Run the Application](#build-and-run-the-application)
 7. [Running Tests](#running-tests)
@@ -27,6 +27,18 @@ This project analyzes customer orders using Python and provides a web interface 
 ## Introduction
 
 This project provides a web service that analyzes customer order data. The analysis includes revenue per month, revenue per product, revenue per customer, and the top 10 customers. The application is Dockerized and uses Flask for the web service.
+
+## Tech Stack
+
+| Technology       | Purpose                                   |
+|------------------|-------------------------------------------|
+| **Python**       | Programming language                      |
+| **Flask**        | Web framework                             |
+| **Docker**       | Containerization                          |
+| **Docker Compose** | Multi-container setup management         |
+| **AWS EC2**      | Hosting and deployment                    |
+| **PuTTY**        | SSH client for EC2 access                 |
+| **FileZilla**    | File transfer to EC2 instance             |
 
 ## Video Showcase
 ### [click here to watch](https://drive.google.com/file/d/1zjkoLSwbLcKg4fDkgh8GjCeOxdKPNZ1L/view?usp=sharing)
@@ -71,17 +83,6 @@ The project is structured to separate concerns and streamline the deployment pro
 
 - **orders.csv**: A sample CSV file containing customer order data, used for analysis.
 
-## Tech Stack
-
-| Technology       | Purpose                                   |
-|------------------|-------------------------------------------|
-| **Python**       | Programming language                      |
-| **Flask**        | Web framework                             |
-| **Docker**       | Containerization                          |
-| **Docker Compose** | Multi-container setup management         |
-| **AWS EC2**      | Hosting and deployment                    |
-| **PuTTY**        | SSH client for EC2 access                 |
-| **FileZilla**    | File transfer to EC2 instance             |
 
 ## Setup and Installation
 
