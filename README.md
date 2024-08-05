@@ -26,7 +26,7 @@ This project analyzes customer orders using Python and provides a web interface 
 
 ## Introduction
 
-This project provides a web service that analyzes customer order data. The analysis includes revenue per month, revenue per product, revenue per customer, and the top 10 customers. The application is Dockerized and uses Flask for the web service.
+This project provides a web service that analyzes customer order data. The analysis includes revenue per month, revenue per product, revenue per customer, and the top 10 customers. The application is Dockerized and uses Flask for the web service. (CI-CD pipeline in progress)
 
 ## Tech Stack
 
