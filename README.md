@@ -1,4 +1,4 @@
-# tanX.fi Assessment for Infrastructure Engineer
+#Small Customer data analysis and testing project 
 
 ## Overview
 
