@@ -1,4 +1,4 @@
-# Small Customer data analysis and testing project 
+# Small Customer data analysis and testing project (Deployed on AWS)
 
 ## Overview
 
