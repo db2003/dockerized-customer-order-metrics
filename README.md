@@ -1,4 +1,4 @@
-# Small Customer data analysis and testing project (Deployed on AWS)
+# Small Revenue and Customer Metrics Application Delpyed on AWS
 
 ## Overview
 
