@@ -1,4 +1,4 @@
-# Small Revenue and Customer Metrics Application Delpyed on AWS
+# Small Revenue and Customer Metrics Application with Docker, Flask and Deployed on AWS  
 
 ## Overview
 
@@ -14,15 +14,14 @@ This project analyzes customer orders using Python and provides a web interface 
 
 1. [Introduction](#introduction)
 2. [Tech Stack](#tech-stack)
-3. [Video Showcase](#video-showcase)
-4. [Architecture and Project Structure](#architecture-and-project-structure)
-5. [Setup and Installation](#setup-and-installation)
-6. [Build and Run the Application](#build-and-run-the-application)
-7. [Running Tests](#running-tests)
-8. [Deploying to AWS](#deploying-to-aws)
-9. [Screenshots](#screenshots)
-10. [Troubleshooting](#troubleshooting)
-11. [Contributing](#contributing)
+3. [Architecture and Project Structure](#architecture-and-project-structure)
+4. [Setup and Installation](#setup-and-installation)
+5. [Build and Run the Application](#build-and-run-the-application)
+6. [Running Tests](#running-tests)
+7. [Deploying to AWS](#deploying-to-aws)
+8. [Screenshots](#screenshots)
+9. [Troubleshooting](#troubleshooting)
+10. [Contributing](#contributing)
 
 ## Introduction
 
@@ -40,8 +39,6 @@ This project provides a web service that analyzes customer order data. The analy
 | **PuTTY**        | SSH client for EC2 access                 |
 | **FileZilla**    | File transfer to EC2 instance             |
 
-## Video Showcase
-### [click here to watch](https://drive.google.com/file/d/1zjkoLSwbLcKg4fDkgh8GjCeOxdKPNZ1L/view?usp=sharing)
 
 ## Architecture and Project Structure
 
